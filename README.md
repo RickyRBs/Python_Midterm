@@ -19,7 +19,7 @@ The two original files (one for red, one for white) were merged into a single da
 
 ## What I Did
 
-**Data loading:** The two CSV files were loaded from Google Drive, combined with `pd.concat()`, and the `type` column was converted to `pd.Categorical` to properly represent it as a label rather than a number.
+**Data loading:** The two CSV files (`winequality-red.csv` and `winequality-white.csv`) are included in this repository. They were combined with `pd.concat()`, and the `type` column was converted to `pd.Categorical` to properly represent it as a label rather than a number.
 
 **Distribution overview:** Plotted histograms for all 11 features split by wine type using a for loop. Red and white wines look quite different — white wine has much higher residual sugar and total sulfur dioxide, while red wine has higher volatile acidity. Several features were also heavily right-skewed, so log transformations were applied using `np.log()` before computing correlations.
 
@@ -42,22 +42,6 @@ The two original files (one for red, one for white) were merged into a single da
 - **Density** is a stronger negative predictor for white wine (r ≈ -0.31), likely because white wines vary more widely in sugar content.
 
 So the answer to the second research question is: partly the same, partly not. Alcohol is consistently important across both types, but several other features only matter for one type.
-
----
-
-## Limitations
-
-Quality scores are subjective — they come from human tasters and may not be fully consistent. The dataset is also heavily skewed toward mid-range scores (5–6), so findings about very high or very low quality wines are based on fewer samples. The analysis is purely correlational; factors like grape variety and production method are not captured here.
-
----
-
-## How to Run
-
-1. Download the two CSVs from the UCI link above
-2. Upload both files to Google Drive
-3. Open `wine_eda.ipynb` in Google Colab
-4. Update `DATA_PATH` in the second cell to match where you saved the files
-5. Run all cells from top to bottom
 
 ---
 
