@@ -2,9 +2,9 @@
 
 ## Overview
 
-For this project I looked at what makes a wine score high or low, and whether the answer is the same for red and white wines. The data comes from the UC Irvine Machine Learning Repository and contains over 6,400 wine samples, each described by 11 chemical measurements and a quality score from human tasters (scale 0–10).
+For this project I was looking at what makes a wine good or bad, scoring the wine high or low, and whether the answer is the same for red and white wines. The data comes from the UC Irvine Machine Learning Repository and contains over 6,400 wine samples, each described by 11 chemical measurements and a quality score from human tasters (scale 0–10).
 
-The two original files (one for red, one for white) were merged into a single dataframe with a `type` column added to track wine type.
+The two original files (one for red, one for white) were merged into a single data frame with a `type` column added to track wine type.
 
 **Dataset:** Cortez et al. (2009). *Wine Quality*. UCI Machine Learning Repository. https://doi.org/10.24432/C56S3T
 
@@ -19,7 +19,7 @@ The two original files (one for red, one for white) were merged into a single da
 
 ## What I Did
 
-**Data loading:** The two CSV files (`winequality-red.csv` and `winequality-white.csv`) are included in this repository. They were combined with `pd.concat()`, and the `type` column was converted to `pd.Categorical` to properly represent it as a label rather than a number.
+**Data loading:** The two CSV files are loaded directly from this repository using raw GitHub URLs, then combined with `pd.concat()`. The `type` column was converted to `pd.Categorical` to properly represent it as a label rather than a number.
 
 **Distribution overview:** Plotted histograms for all 11 features split by wine type using a for loop. Red and white wines look quite different — white wine has much higher residual sugar and total sulfur dioxide, while red wine has higher volatile acidity. Several features were also heavily right-skewed, so log transformations were applied using `np.log()` before computing correlations.
 
