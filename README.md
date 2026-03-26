@@ -21,7 +21,7 @@ The two original files (one for red, one for white) were merged into a single da
 
 **Data loading:** The two CSV files are loaded directly from this repository using raw GitHub URLs, then combined with `pd.concat()`. The `type` column was converted to `pd.Categorical` to properly represent it as a label rather than a number.
 
-**Distribution overview:** Plotted histograms for all 11 features split by wine type using a for loop. Red and white wines look quite different — white wine has much higher residual sugar and total sulfur dioxide, while red wine has higher volatile acidity. Several features were also heavily right skewed, so log transformations were applied using `np.log()` before computing correlations.
+**Distribution overview:** Plotted histograms for all 11 features split by wine type using a for loop. Red and white wines look quite different white wine has much higher residual sugar and total sulfur dioxide, while red wine has higher volatile acidity. Several features were also heavily right skewed, so log transformations were applied using `np.log()` before computing correlations.
 
 **Correlation analysis:** Pearson correlations between each feature and quality were computed separately for red and white wine using a for loop with `np.corrcoef()`. Results were collected into a list of dictionaries and converted to a DataFrame — the same pattern used in the API exercises in class.
 
