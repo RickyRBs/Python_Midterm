@@ -23,7 +23,7 @@ The two original files (one for red, one for white) were merged into a single da
 
 **Distribution overview:** Plotted histograms for all 11 features split by wine type using a for loop. Red and white wines look quite different white wine has much higher residual sugar and total sulfur dioxide, while red wine has higher volatile acidity. Several features were also heavily right skewed, so log transformations were applied using `np.log()` before computing correlations.
 
-**Correlation analysis:** Pearson correlations between each feature and quality were computed separately for red and white wine using a for loop with `np.corrcoef()`. Results were collected into a list of dictionaries and converted to a DataFrame — the same pattern used in the API exercises in class.
+**Correlation analysis:** Pearson correlations between each feature and quality were computed separately for red and white wine using a for loop with `np.corrcoef()`. Results were collected into a list of dictionaries and converted to a DataFrame the same pattern used in the API exercises in class.
 
 **High vs low quality comparison:** Low quality was defined as scores ≤5 and high quality as ≥7 using `df.loc[]` filtering. Mean values for each group were computed using a nested for loop over wine type and quality group, then visualized with violin plots and grouped bar charts.
 
